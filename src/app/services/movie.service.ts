@@ -9,8 +9,9 @@ export class MovieService {
   private api_key = 'api_key=5a1e00313c18a1e00d243cfeb412c79d';
   private page='&page=1'
   private lenguage='&language=es'
-  private api_url_search_movie='https://api.themoviedb.org/3/search/movie?';
-  private api_url_get_reviews='';
+  private search_movie='search/movie?';
+  private get_reviews='movie/';
+  private api_url='https://api.themoviedb.org/3/';
   private reviews='/reviews?'
   private adult='&include_adult=false'
   private query='&query=';
@@ -19,14 +20,14 @@ export class MovieService {
   }
 
    searchMovie(queryString){
-    var request=this.api_url_search_movie+this.api_key+this.lenguage+this.query+queryString+this.page+this.adult;
+    var request=this.api_url+this.search_movie+this.api_key+this.lenguage+this.query+queryString+this.page+this.adult;
 
     return this.http.get(request)
     .map( res => res.json())
   }
 
   getReviews(id){
-    var request=this.api_url_get_reviews+id+this.reviews+this.api_key+this.lenguage;
+    var request=this.api_url+this.get_reviews+id+this.reviews+this.api_key+this.lenguage;
 
     return this.http.get(request)
     .map(res => res.json())
