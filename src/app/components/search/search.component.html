@@ -1,14 +1,21 @@
 
-<div class="input-group">
-  <input [(ngModel)]="searchString" type="text"  class="form-control" placeholder="Busca por una pelicula...">
-  <span class="input-group-btn">
-    <button (click)="searchMovie()" class="btn btn-secondary" type="button">Buscar!</button>
-  </span>
-</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="input-group">
+        <input [(ngModel)]="searchString" type="text"  class="form-control" placeholder="Busca por una pelicula...">
+        <span class="input-group-btn">
+          <button (click)="searchMovie()" class="btn btn-secondary" type="button">Buscar!</button>
+        </span>
+      </div>
+    </div>
+  </div>
 
-<div *ngFor="let movie of movies">
-  <img src="https://image.tmdb.org/t/p/w154{{movie.poster_path}}"  alt="No existe imagen" >
-  <h3 ><strong>{{ movie.title}}</strong></h3>
-  <p><strong>Título Original: </strong> {{ movie.original_title }} </p>
-  <p><strong>Estreno: </strong> {{ movie.release_date }} </p>
+  <div *ngFor="let movie of movies">
+    <img src="https://image.tmdb.org/t/p/w154{{movie.poster_path}}"  alt="No existe imagen" >
+    <h3 ><strong>{{ movie.title}}</strong></h3>
+    <p><strong>Título Original: </strong> {{ movie.original_title }} </p>
+    <p><strong>Estreno: </strong> {{ movie.release_date }} </p>
+  </div>
+
 </div>
