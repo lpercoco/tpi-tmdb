@@ -10,7 +10,7 @@ export class MovieService {
   private page='&page=1'
   private lenguage='&language=es'
   private search_movie='search/movie?';
-  private get_reviews='movie/';
+  private movie='movie/';
   private api_url='https://api.themoviedb.org/3/';
   private reviews='/reviews?'
   private adult='&include_adult=false'
@@ -27,7 +27,15 @@ export class MovieService {
   }
 
   getReviews(id){
-    var request=this.api_url+this.get_reviews+id+this.reviews+this.api_key+this.lenguage;
+    var request=this.api_url+this.movie+id+this.reviews+this.api_key+this.lenguage;
+
+    return this.http.get(request)
+    .map(res => res.json())
+  }
+
+// https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US
+  getMovie(id){
+    var request= this.api_url+this.movie+id+'?'+this.api_key+this.lenguage;
 
     return this.http.get(request)
     .map(res => res.json())
