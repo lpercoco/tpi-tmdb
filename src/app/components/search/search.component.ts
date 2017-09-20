@@ -15,8 +15,10 @@ export class SearchComponent {
   }
 
   searchMovie(){
-    this.movieService.searchMovie(this.searchString)
-    .subscribe(dat =>this.movies=dat.results);
+    if(this.searchString!=''){
+      this.movieService.searchMovie(this.searchString)
+      .subscribe(dat =>this.movies=dat.results);
+    }
   }
 
 }
