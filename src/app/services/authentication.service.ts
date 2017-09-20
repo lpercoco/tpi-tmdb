@@ -27,11 +27,8 @@ export class AuthenticationService {
 
   //https://www.themoviedb.org/authenticate/{REQUEST_TOKEN}?redirect_to=http://www.yourapp.com/approved
   getUserValidation(REQUEST_TOKEN : string){
-
     var request=this.api_url_authenticate+REQUEST_TOKEN+this.redirect_url;
-
     window.location.href=request;
-
   }
 
   // https://api.themoviedb.org/3/authentication/session/new?api_key=<<api_key>>

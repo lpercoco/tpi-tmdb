@@ -26,6 +26,8 @@ export class HeaderComponent {
       if(this.requesttoken.success){
         this.authenticationService.getUserValidation(this.requesttoken.request_token);
 
+        this.authenticationService.storageRequestToken(this.requesttoken.request_token);
+
         this.authenticationService.createSessionId();
 
       }});
