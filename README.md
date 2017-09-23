@@ -3,5 +3,7 @@
 ## INTEGRANTES:
 
 *Percoco, Lisandro
+
 *Pellegrini, Nicolás
+
 *Arnold, Joel
