@@ -29,23 +29,7 @@ export class MovieComponent implements OnInit {
 
     //falta traer reviews
 
-    this.route.params.subscribe(params => {
-      this.movieId = +params['id'];
-
-
-      this.route.params.map(params => params['id'])
-      .subscribe((id) => {
-        this.themoviedbService.getMovieById(id)
-          .subscribe(data => {
-            this.movie = data;
-            this.genres = this.movie.genres;
-            // console.log(this.movie);
-          }, (err: any) => {
-            if (err.status === 404) {
-              this.toastr.error('No existe Película con ese ID', 'Error!');
-              this.router.navigate(['/search']);
-            }a
-          });
+    
   }
 
 }

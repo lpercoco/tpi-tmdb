@@ -11,14 +11,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchComponent } from './components/search/search.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { MovieService } from './services/movie.service';
-import { PeliculaDetalle } from './components/pelicula-detalle/pelicula-detalle.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    PeliculaDetalle,
     HeaderComponent,
     SearchComponent,
     MovieComponent
