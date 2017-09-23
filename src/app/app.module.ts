@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule }   from '@angular/forms';
 import { HttpModule }    from '@angular/http';
+import { RouterModule }   from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,12 +11,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchComponent } from './components/search/search.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { MovieService } from './services/movie.service';
+import { PeliculaDetalle } from './components/pelicula-detalle/pelicula-detalle.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
+    PeliculaDetalle,
     HeaderComponent,
     SearchComponent,
     MovieComponent
